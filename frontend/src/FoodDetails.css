@@ -1,0 +1,228 @@
+.food-details-page {
+  min-height: 100vh;
+  background: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  padding: 24px 16px;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.food-details-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  width: 80vw;
+  min-width: 700px;
+  max-width: 720px;
+  overflow: hidden;
+}
+
+.food-details-header {
+  background: #1a1a2e;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  padding: 16px 20px;
+  gap: 12px;
+}
+
+.food-details-header h1 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.food-details-header .back-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.4rem;
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
+}
+
+.food-details-content {
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.food-info {
+  text-align: center;
+}
+
+.food-icon {
+  font-size: 3rem;
+  margin-bottom: 12px;
+}
+
+.food-name {
+  margin: 0 0 8px;
+  font-size: 1.6rem;
+  color: #1a1a2e;
+  font-weight: 700;
+}
+
+.food-brand {
+  margin: 0 0 4px;
+  color: #666;
+  font-size: 1rem;
+}
+
+.food-quantity {
+  margin: 0;
+  color: #888;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.nutrition-section {
+  width: 100%;
+}
+
+.nutrition-section h3 {
+  text-align: center;
+  margin: 0 0 20px;
+  font-size: 1.1rem;
+  color: #333;
+  font-weight: 600;
+}
+
+.nutrition-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  width: 100%;
+}
+
+.nutrition-card {
+  background: #f8f9fa;
+  border-radius: 12px;
+  padding: 20px 16px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  transition: transform 0.2s;
+}
+
+.nutrition-card:hover {
+  transform: translateY(-2px);
+}
+
+.nutrition-icon {
+  font-size: 1.8rem;
+}
+
+.nutrition-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1a1a2e;
+}
+
+.nutrition-label {
+  font-size: 0.85rem;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.nutrition-card.calories {
+  background: #fff3e0;
+}
+
+.nutrition-card.calories .nutrition-value {
+  color: #e65100;
+}
+
+.nutrition-card.protein {
+  background: #e3f2fd;
+}
+
+.nutrition-card.protein .nutrition-value {
+  color: #1565c0;
+}
+
+.nutrition-card.carbs {
+  background: #f3e5f5;
+}
+
+.nutrition-card.carbs .nutrition-value {
+  color: #7b1fa2;
+}
+
+.nutrition-card.fat {
+  background: #fce4ec;
+}
+
+.nutrition-card.fat .nutrition-value {
+  color: #c62828;
+}
+
+.saved-message {
+  color: #4caf50;
+  font-weight: 600;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 16px;
+  width: 100%;
+  max-width: 500px;
+}
+
+.primary-btn {
+  flex: 1;
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+  background: #4a7aff;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.primary-btn:hover {
+  background: #3a6ae8;
+}
+
+.secondary-btn {
+  flex: 1;
+  padding: 14px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  background: #fff;
+  color: #333;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.secondary-btn:hover {
+  border-color: #4a7aff;
+  color: #4a7aff;
+}
+
+@media (max-width: 768px) {
+  .food-details-card {
+    min-width: auto;
+    width: 100%;
+  }
+
+  .nutrition-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .action-buttons {
+    flex-direction: column;
+  }
+}

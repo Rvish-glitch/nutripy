@@ -1,0 +1,186 @@
+.history-container {
+  background: #f0f2f5;
+  min-height: 100vh;
+  padding: 40px 20px;
+  font-family: 'DM Sans', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.history-card {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  width: 100%;
+  max-width: 720px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.history-header {
+  background: #2d3a4a;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 24px;
+  font-size: 1.2rem;
+}
+
+.history-back-btn {
+  font-size: 1.7rem;
+  cursor: pointer;
+  margin-right: 14px;
+  line-height: 1;
+}
+
+.history-title {
+  font-weight: 700;
+  font-size: 1.2rem;
+  flex: 1;
+}
+
+.history-products {
+  font-size: 0.95rem;
+  color: #adc8e0;
+}
+
+.history-summary {
+  padding: 20px 24px 16px 24px;
+  border-bottom: 1px solid #f0f2f5;
+}
+
+.history-calories {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.history-calories-icon {
+  font-size: 2rem;
+}
+
+.history-calories-label {
+  font-size: 1rem;
+  color: #8a93a5;
+}
+
+.history-calories-value {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #ffb74d;
+}
+
+.history-macros-row {
+  display: flex;
+  gap: 12px;
+}
+
+.history-macro {
+  flex: 1;
+  background: #f7f8fa;
+  border-radius: 10px;
+  padding: 12px 0;
+  text-align: center;
+}
+
+.history-macro.protein .history-macro-label,
+.history-macro.protein .history-macro-value {
+  color: #4a7aff;
+}
+
+.history-macro.carbs .history-macro-label,
+.history-macro.carbs .history-macro-value {
+  color: #ffb74d;
+}
+
+.history-macro.fat .history-macro-label,
+.history-macro.fat .history-macro-value {
+  color: #ff6b6b;
+}
+
+.history-macro-label {
+  font-size: 0.88rem;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.history-macro-value {
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.history-list {
+  padding: 12px 24px 20px 24px;
+}
+
+.history-empty {
+  text-align: center;
+  padding: 48px 24px;
+  color: #8a93a5;
+  font-size: 1rem;
+}
+
+.history-empty-icon {
+  font-size: 3rem;
+  margin-bottom: 12px;
+}
+
+.history-list-item {
+  background: #f7f8fa;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  padding: 14px 16px;
+  margin-bottom: 12px;
+  border: 1px solid #eef0f3;
+}
+
+.history-list-item:last-child {
+  margin-bottom: 0;
+}
+
+.history-list-icon {
+  font-size: 1.7rem;
+  margin-right: 14px;
+}
+
+.history-list-details {
+  flex: 1;
+}
+
+.history-list-title {
+  font-weight: 700;
+  font-size: 1rem;
+  color: #1a2133;
+}
+
+.history-list-qty {
+  color: #8a93a5;
+  font-size: 0.88rem;
+  margin-top: 2px;
+}
+
+.history-list-time {
+  color: #b0b0b0;
+  font-size: 0.8rem;
+  margin-top: 2px;
+}
+
+.history-list-type {
+  background: #e8f0fe;
+  color: #4a7aff;
+  border-radius: 20px;
+  padding: 4px 12px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  margin-left: 12px;
+  white-space: nowrap;
+}

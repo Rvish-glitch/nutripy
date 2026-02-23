@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NutriDev</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #f0f2f5;
+      --surface: #ffffff;
+      --surface-hover: #f7f8fa;
+      --text-primary: #1a2133;
+      --text-secondary: #8a93a5;
+      --accent-blue: #4a7aff;
+      --accent-pink: #ff6b8a;
+      --accent-green: #38c97a;
+      --border: rgba(0,0,0,0.06);
+      --shadow-sm: 0 2px 8px rgba(0,0,0,0.06);
+      --shadow-md: 0 8px 24px rgba(0,0,0,0.08);
+      --radius-lg: 20px;
+      --radius-xl: 28px;
+    }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--bg);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 40px 20px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 720px;
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+
+    /* Header Card */
+    .header-card {
+      background: var(--surface);
+      border-radius: var(--radius-xl);
+      padding: 28px 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border);
+      animation: fadeUp 0.4s ease both;
+    }
+
+    .header-text .greeting {
+      font-size: 14px;
+      color: var(--text-secondary);
+      font-weight: 400;
+      margin-bottom: 4px;
+      letter-spacing: 0.01em;
+    }
+
+    .header-text .title {
+      font-family: 'DM Serif Display', serif;
+      font-size: 26px;
+      color: var(--text-primary);
+      font-weight: 400;
+      letter-spacing: -0.02em;
+    }
+
+    .avatar-btn {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: var(--bg);
+      border: 1.5px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.15s;
+      flex-shrink: 0;
+    }
+
+    .avatar-btn:hover {
+      background: #e8eaf0;
+      transform: scale(1.05);
+    }
+
+    .avatar-btn svg {
+      width: 22px;
+      height: 22px;
+      color: var(--text-secondary);
+    }
+
+    /* Section Label */
+    .section-label {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-primary);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      padding-left: 4px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      animation: fadeUp 0.4s 0.1s ease both;
+    }
+
+    .section-label::before {
+      content: '';
+      display: block;
+      width: 3px;
+      height: 16px;
+      background: var(--accent-blue);
+      border-radius: 2px;
+    }
+
+    /* Grid */
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    /* Action Card */
+    .action-card {
+      background: var(--surface);
+      border-radius: var(--radius-lg);
+      padding: 32px 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+      cursor: pointer;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
+      transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+      text-decoration: none;
+      animation: fadeUp 0.4s ease both;
+    }
+
+    .action-card:nth-child(1) { animation-delay: 0.15s; }
+    .action-card:nth-child(2) { animation-delay: 0.2s; }
+    .action-card:nth-child(3) { animation-delay: 0.25s; }
+    .action-card:nth-child(4) { animation-delay: 0.3s; }
+
+    .action-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
+      background: var(--surface-hover);
+    }
+
+    .action-card:active {
+      transform: translateY(-1px);
+    }
+
+    .icon-wrap {
+      width: 64px;
+      height: 64px;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.2s ease;
+    }
+
+    .action-card:hover .icon-wrap {
+      transform: scale(1.08);
+    }
+
+    .icon-wrap.scan {
+      background: #eef1ff;
+    }
+
+    .icon-wrap.food {
+      background: #f0f0f0;
+    }
+
+    .icon-wrap.history {
+      background: #fff0f3;
+    }
+
+    .icon-wrap.bmi {
+      background: #f0f0f0;
+    }
+
+    .icon-wrap svg {
+      width: 28px;
+      height: 28px;
+    }
+
+    .card-label {
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--text-primary);
+      letter-spacing: -0.01em;
+    }
+
+    /* Animations */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(16px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <!-- Header -->
+    <div class="header-card">
+      <div class="header-text">
+        <div class="greeting">Hello 👋</div>
+        <div class="title">Welcome to NutriDev</div>
+      </div>
+      <button class="avatar-btn" aria-label="Profile">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+          <circle cx="12" cy="7" r="4"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Insights Label -->
+    <div class="section-label">Your Insights</div>
+
+    <!-- Grid -->
+    <div class="grid">
+
+      <!-- Scan New -->
+      <div class="action-card">
+        <div class="icon-wrap scan">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#4a7aff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 7V5a2 2 0 0 1 2-2h2"/>
+            <path d="M17 3h2a2 2 0 0 1 2 2v2"/>
+            <path d="M21 17v2a2 2 0 0 1-2 2h-2"/>
+            <path d="M7 21H5a2 2 0 0 1-2-2v-2"/>
+            <rect x="7" y="7" width="10" height="10" rx="1"/>
+          </svg>
+        </div>
+        <span class="card-label">Scan New</span>
+      </div>
+
+      <!-- Add Food -->
+      <div class="action-card">
+        <div class="icon-wrap food">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#1a2133" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 11l19-9-9 19-2-8-8-2z"/>
+          </svg>
+        </div>
+        <span class="card-label">Add Food</span>
+      </div>
+
+      <!-- History -->
+      <div class="action-card">
+        <div class="icon-wrap history">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2" stroke="#ff6b8a"/>
+            <line x1="16" y1="2" x2="16" y2="6" stroke="#4a7aff"/>
+            <line x1="8" y1="2" x2="8" y2="6" stroke="#4a7aff"/>
+            <line x1="3" y1="10" x2="21" y2="10" stroke="#ff6b8a"/>
+          </svg>
+        </div>
+        <span class="card-label">History</span>
+      </div>
+
+      <!-- BMI Calculator -->
+      <div class="action-card">
+        <div class="icon-wrap bmi">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#1a2133" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="18" height="18" rx="2"/>
+            <path d="M12 8v4l3 3"/>
+            <circle cx="12" cy="12" r="1" fill="#1a2133"/>
+          </svg>
+        </div>
+        <span class="card-label">BMI Calculator</span>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>
