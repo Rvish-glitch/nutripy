@@ -1,4 +1,4 @@
-# 🥗 NutriDev — Nutrition Tracking App
+# 🥗 NutriPy — Nutrition Tracker 
 
 > A smart nutrition tracker that lets you scan barcodes, search Indian foods, calculate BMI, and log your daily meals.
 
